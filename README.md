@@ -10,10 +10,10 @@ Due to data requirements, developers need to spin up application and database in
 Create a Lambda function that can be run on a regular schedule (Cloudwatch Events) that get the number of EC2 Instances running in an account that have a specific tag and put the results in an InfluxDB.
 
 ### Instructions
-Fork this repo to your personal GitHub account.  After you have completed your function, email a link to your repository for review (an address will be provided to you).
+Fork this repo to your personal GitHub account.  After you have completed your function, email a link to your repository for review (an address will be provided to you).  For convenience. , an InfluxDB Docker compose file is included to spin up the InfluxDB
 
 ## What You Will Need
 1.  A GitHub account
 2.  AWS Account
-
+3.  Docker
 
