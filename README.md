@@ -1,23 +1,19 @@
 # Interview Homework
-This exercise is designed to access the candidate's ability to build and dep
 
-## Scenario
-Create a Lambda function that returns the number of EC2 Instances that have a specific tag.
 
-![GitHub Logo](diagram.png)
+## Problem 1
+
+### Scenario
+Due to data requirements, developers need to spin up application and database instances in a special AWS account to be able to test their code.  In order to contain costs, the SRE team needs to keep track of how many instances are running at any given time to make sure that we do not cross certain cost thresholds.
+
+### Requirement
+Create a Lambda function that returns the number of EC2 Instances running in an account that have a specific tag.
+
+### Instructions
+Fork this repo to your personal GitHub account.  After you have completed your function, email a link to your repository for review (an address will be provided to you).
 
 ## What You Will Need
-1.  An AWS Account
-2.  A GitHub account
-
-
-
-
-Things that need to be included:
-
-Create a lambda script that connects to a given AWS account and searches it for a tag and then does something simple.
-
-If you need to do something, include instructions on how to build the Lambda package. (i.e. extra python packages)
-
+1.  A GitHub account
+2.  AWS Account
 
 
