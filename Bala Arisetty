@@ -1,0 +1,40 @@
+import boto3
+
+ec2 = boto3.client('ec2');
+cloudwatch = boto3.client('cloudwatch');
+
+def lambda_handler(event, context):
+    count = 0
+    response = ec2.describe_instances(
+    # Tag Filter
+     Filters=[
+            {
+                'Name': 'tag:'+tagkey,
+                'Values': [tagvalue]
+            }
+        ]
+    )
+    instancelist = []
+    for r in response['Reservations']:
+        count += len(r['instancelist'])
+
+    cloudwatch.put_metric_data(
+        Namespace='EC2',
+        MetricData=[
+            {
+                'MetricName': 'InstanceCount',
+                'StatisticValues': {
+                    'SampleCount': count,
+                    'Sum': count,
+                    'Minimum': count,
+                    'Maximum': count
+                },
+                'Unit': 'Count'
+            },
+        ]
+    )
+       
+    
+client = InfluxDBClient(influxdb, 8086, influxdb)
+client.create_database(influxdb)
+client.write(['Currect instance count', '"count"'])
